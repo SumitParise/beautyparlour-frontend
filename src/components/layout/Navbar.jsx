@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PublicMenu from "../ui/PublicMenu";
 import PrivateMenu from "../ui/PrivateMenu";
-import { AuthService } from "../../auth/authService";
+import { AuthService } from "../../auth/AuthService";
 
 
 export default function Navbar() {
