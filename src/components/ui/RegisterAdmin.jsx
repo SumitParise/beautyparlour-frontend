@@ -31,7 +31,6 @@ export default function RegisterAdmin({ show, onClose }) {
         headers: { Authorization: `Bearer ${token}` },
       });
 
-      console.log("Admin registered:", res.data);
       alert("Admin registered successfully!");
       handleReset();
       onClose();

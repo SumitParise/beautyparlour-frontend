@@ -33,9 +33,9 @@ export default function Login() {
       Email: form.email, // 👈 capitalize to match DTO
       Password: form.password,
     };
-     console.log(payload);
+     
 
-      const res = await axios.post("https://localhost:7055/api/Auth/login", payload);
+      const res = await axios.post("https://beautyparlourapi-f3a3beedh5fke2ge.centralindia-01.azurewebsites.net/api/Auth/login", payload);
 
       if (res.data) {
         alert("Login successful!");
@@ -65,7 +65,7 @@ export default function Login() {
     }
     try {     
 
-      const res = await axios.post("https://localhost:7055/api/Auth/forget-password", {
+      const res = await axios.post("https://beautyparlourapi-f3a3beedh5fke2ge.centralindia-01.azurewebsites.net/api/Auth/forget-password", {
         email: forgotForm.email,
         ConfirmPassword:forgotForm.confirmPassword,
         Password: forgotForm.password,

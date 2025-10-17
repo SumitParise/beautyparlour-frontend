@@ -22,7 +22,7 @@ export default function Reviews() {
     const fetchReviews = async () => {
       try {
         const response = await axios.get(
-          "https://localhost:7055/api/Feedback/list"
+          "https://beautyparlourapi-f3a3beedh5fke2ge.centralindia-01.azurewebsites.net/api/Feedback/list"
         );
         setReviews(response.data || []);
       } catch (error) {
@@ -83,7 +83,7 @@ export default function Reviews() {
       setLoading(true);
 
       const response = await axios.post(
-        "https://localhost:7055/api/Feedback",
+        "https://beautyparlourapi-f3a3beedh5fke2ge.centralindia-01.azurewebsites.net/api/Feedback",
         null,
         {
           params: {
@@ -96,7 +96,7 @@ export default function Reviews() {
 
       if (response.status === 200 || response.status === 201) {
         const updated = await axios.get(
-          "https://localhost:7055/api/Feedback/list"
+          "https://beautyparlourapi-f3a3beedh5fke2ge.centralindia-01.azurewebsites.net/api/Feedback/list"
         );
         setReviews(updated.data || []);
         setNewReview({ customerName: "", rating: 0, comments: "" });
