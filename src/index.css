@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+}
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, #f4086a, #f02677, #dd528c); 
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* Shine Effect Overlay */
+.shine-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 6%; /* very thin */
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.4) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  mix-blend-mode: lighten; /* key fix */
+  filter: blur(2px); /* softens the streak */
+  animation: shine-pass 3s ease-in-out infinite;
+}
+
+@keyframes shine-pass {
+  0% { left: -10%; }
+  100% { left: 110%; }
+}
+
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+.animate-loading-bar {
+  animation: loading 0.8s ease infinite;
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-button .animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.1) 100%);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  animation: shimmer 2s linear infinite;
+}

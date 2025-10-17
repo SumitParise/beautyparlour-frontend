@@ -1,0 +1,22 @@
+
+This is the standard folder structure of react
+
+
+
+beauty-parlour/
+│── public/               # Static assets (favicon, logo, etc.)
+│── src/
+│   ├── assets/           # Images, icons, fonts
+│   ├── components/       # Reusable UI components
+│   │    ├── ui/          # Small reusable pieces (Button, Card, Input)
+│   │    └── layout/      # Navbar, Footer, Sidebar
+│   ├── pages/            # Page-level components (Home, Services, Booking, Contact)
+│   ├── features/         # Feature-based modules (auth, booking, services)
+│   ├── hooks/            # Custom React hooks
+│   ├── context/          # Context API or Zustand store
+│   ├── utils/            # Helpers (date formatter, price calc, etc.)
+│   ├── styles/           # Global styles, Tailwind config overrides if any
+│   ├── App.jsx           # Root component
+│   ├── main.jsx          # Entry point
+│── vite.config.js
+│── package.json
